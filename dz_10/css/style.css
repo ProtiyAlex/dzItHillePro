@@ -1,0 +1,6 @@
+@import "./reset.css";
+body {
+  background-color: #0277d1;
+  font: 600 18px sans-serif;
+  color: #ffffff;
+}

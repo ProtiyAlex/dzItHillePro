@@ -1,0 +1,70 @@
+@import "./reset.css";
+body {
+  display: flex;
+  justify-content: center;
+
+  background-color: #0277d1;
+
+  font: 600 18px sans-serif;
+  color: #ffffff;
+}
+
+.main {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 150px;
+}
+h1 {
+  margin: 10px 0 10px;
+  text-align: center;
+  color: #fff;
+}
+.wrapInput {
+  background-color: #fff;
+  padding: 15px;
+}
+input[type="text"] {
+  width: 310px;
+  height: 30px;
+  font-size: 1.5em;
+  background: #fff;
+  color: #2f4f4f;
+}
+button {
+  font-size: 1.5em;
+  color: #53bdff;
+  background-color: #fff;
+  outline: 0;
+  border: none;
+  width: 50px;
+}
+.tasksBoard {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 10px 40px;
+}
+
+li {
+  border-bottom: 1px solid #53bdff;
+  padding: 15px;
+
+  font-size: 1.3em;
+  color: #2f4f4f;
+}
+
+a,
+.delBtn {
+  float: right;
+  text-align: right;
+  color: #ff6161;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+a {
+  margin-top: 5px;
+}
+.delBtn {
+  font-size: 0.8em;
+}

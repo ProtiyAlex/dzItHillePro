@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DZ №9</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+  <div class="main">
+    <h1>ToDoList</h1>
+    <input type="text" id="task" />
+    <button class="addTaskBtn" id="addTaskBtn">Add</button>
+    <div class="result" id="result" hidden>
+      <ul></ul>
+      <a class="clear" id="clear">Clear</a>
+    </div>
+  </div>
+  <script type="text/template" id="templateLiTask">
+    <li>{{Task}} <button class="delBtn" id="delBtn">Del</button></li>
+  </script>
+</body>
+
+</html>

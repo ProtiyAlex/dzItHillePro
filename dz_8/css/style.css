@@ -1,0 +1,54 @@
+@import "./reset.css";
+body {
+  display: flex;
+  justify-content: center;
+
+  background-color: #0277d1;
+
+  font: 600 18px sans-serif;
+  color: #ffffff;
+}
+
+.main {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 150px;
+  position: relative;
+}
+h1 {
+  margin: 10px 0 10px;
+  text-align: center;
+  color: #fff;
+}
+
+select {
+  min-width: 300px;
+  min-height: 30px;
+  font-size: 1.4em;
+  background: #fff;
+  color: #2f4f4f;
+  margin: 10px 0;
+  padding: 5px;
+}
+.square {
+  width: 300px;
+  height: 300px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.rectangle {
+  height: 150px;
+  width: 300px;
+}
+#wrap {
+  background-color: red;
+  position: absolute;
+  top: 130px;
+  left: 0px;
+}
