@@ -1,0 +1,43 @@
+#list .title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.title {
+  background: #fff;
+  color: #333;
+  display: block;
+  user-select: none;
+
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+
+  vertical-align: middle;
+  width: 100%;
+  border-bottom: 1px solid #1967c3;
+
+  transition: background 0.5s ease-out;
+}
+.title:hover {
+  border: 2px solid #1967c3;
+}
+.active {
+  background: #1967c3;
+  color: #fff;
+  display: block;
+}
+.body {
+  margin: 5px 30px 5px 50px;
+  color: #fff;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.4s linear;
+}
+
+.body-active {
+  max-height: 300px;
+
+  overflow: hidden;
+
+  transition: max-height 1s linear;
+}
