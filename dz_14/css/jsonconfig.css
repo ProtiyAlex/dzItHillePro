@@ -1,0 +1,22 @@
+.item-json {
+  width: 100%;
+  min-height: 50px;
+  background-color: white;
+  color: black;
+  line-height: 50px;
+  padding: 0 20px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.title-json {
+  line-height: 50px;
+  max-width: 80%;
+}
+.delete-btn {
+  line-height: 50px;
+  padding: 0 5px;
+}
+.done {
+  background-color: #a1da7c;
+}

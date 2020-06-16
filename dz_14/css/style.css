@@ -1,0 +1,22 @@
+@import "./reset.css";
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #0277d1;
+  color: #ffffff;
+
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.container {
+  margin-top: 20px;
+  padding: 7px 7px 7px 7px;
+
+  border: 2px solid white;
+  border-radius: 5px;
+
+  height: 100%;
+  width: 500px;
+}
