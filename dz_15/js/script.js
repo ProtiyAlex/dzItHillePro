@@ -42,19 +42,20 @@ function render(data) {
 }
 
 function changeTemplate() {
-  url = PHOTOS_URL;
+  albomIDUrl();
   template = document.getElementById(PHOTO_ITEM_TEMP_ID).innerHTML;
   wrap = document.getElementById(BODY_WRAP_CLASS);
+}
+
+function albomIDUrl() {
+  url = PHOTOS_URL + "?albumId=" + activeMenu;
 }
 
 function renderBody(data) {
   wrap.innerHTML = "";
   data.forEach((item) => {
-    if (item.albumId == activeMenu) {
-      cloneTemplate = template.replace("{{url}}", item.thumbnailUrl);
-
-      htmlToElement();
-    }
+    cloneTemplate = template.replace("{{url}}", item.thumbnailUrl);
+    htmlToElement();
   });
 }
 
@@ -85,6 +86,7 @@ function onclickMenuTitle(event) {
     activeChanges(event.target);
   }
 
+  albomIDUrl();
   getData(url);
 }
 
