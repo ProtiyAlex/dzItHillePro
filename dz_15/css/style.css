@@ -1,0 +1,55 @@
+@import "./reset.css";
+
+body {
+  background-color: #0277d1;
+  color: #ffffff;
+
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.container {
+  margin-top: 20px;
+  padding: 7px 7px 7px 7px;
+
+  border: 2px solid white;
+  border-radius: 5px;
+
+  height: 100%;
+}
+.menu {
+  border-right: 2px solid white;
+}
+.body {
+  padding: 0 40px;
+}
+
+.img {
+  display: inline-block;
+  max-height: 150px;
+}
+.item-menu {
+  width: 100%;
+  min-height: 50px;
+  background-color: white;
+  color: black;
+
+  padding: 7px 10px;
+  margin-bottom: 5px;
+  display: flex;
+
+  align-items: center;
+  transition: all 0.3s linear;
+}
+.title-json {
+  max-width: 100%;
+}
+.item-json:hover {
+  background-color: #4a93ca;
+  color: white;
+  transition: all 0.3s linear;
+}
+.active {
+  color: white;
+  background-color: yellowgreen;
+}

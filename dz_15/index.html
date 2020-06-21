@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DZ №14</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="container" class="container">
+      <div class="row">
+        <div id="menu-wrap" class="col-lg-3 menu"></div>
+        <div id="body-wrap" class="col-lg-9 body">
+
+        </div>
+      </div>
+    <script type="text/template" id="menuItemTemplate">
+      <div class="item-menu" data-id="{{id}}">
+        {{title}}
+       
+      </div>
+    </script>
+    <script type="text/template" id="photoItemTemplate">
+      <div class="img">
+        <img src="{{url}}" alt="">
+      </div>
+      </script>
+  </body>
+</html>
