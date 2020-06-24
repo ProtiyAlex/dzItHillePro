@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DZ №16</title>
+    <link rel="stylesheet" href="./css/todolist.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/todolist.js" defer></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="container" class="container">
+      <div id="wrap-todo" class="wrap-todo"></div>
+      <div class="wrap-btn">
+        <input
+          id="taskNameInput"
+          type="text"
+          class="task-name"
+          placeholder="New task"
+        />
+        <button id="addTaskBtn" class="add-task-btn">add</button>
+      </div>
+    </div>
+    <script type="text/template" id="taskItemTemplate">
+      <span class='title-json'>{{title}}</span>
+      <button class='delete-btn'>✘</button>
+    </script>
+  </body>
+</html>
