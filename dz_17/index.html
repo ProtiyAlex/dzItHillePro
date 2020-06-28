@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DZ №17</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="container" class="container">
+      <div class="row">
+        <div class="header-wrap col-lg-12">
+          <h1>Sticker</h1>
+          <button id="btn-add" class="btn-add">Add</button>
+        </div>
+        <div id="sticker-wrap" class="sticker-wrap col-lg-12"></div>
+      </div>
+    </div>
+    <script type="text/template" id="stickerTemplate">
+
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;" data-id="{{id}}" >
+              <div class="card-header">
+                <span> Header Sticker</span> <button class="del-sticker">✘</button>
+              </div>
+              <div class="card-body">
+                <textarea rows="2" cols="25" name="text" class="card-text">
+      {{text}}
+                </textarea>
+              </div>
+            </div>
+    </script>
+  </body>
+</html>
