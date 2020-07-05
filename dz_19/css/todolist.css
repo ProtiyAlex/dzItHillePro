@@ -1,0 +1,62 @@
+/* .task-item-wrap {
+  width: 100%;
+  min-height: 50px;
+  background-color: yellow;
+  color: black;
+  line-height: 50px;
+  padding: 0 20px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+} */
+.task-item {
+  line-height: 50px;
+  max-width: 80%;
+}
+.delete-btn {
+  line-height: 50px;
+  padding: 0 5px;
+}
+.done {
+  background-color: green;
+}
+.wrap-todo,
+.wrap-btn {
+  margin: 20px 0 0 7px;
+  padding: 7px 7px 7px 7px;
+
+  border: 2px solid white;
+  border-radius: 5px;
+
+  height: 100%;
+  /* width: 500px; */
+}
+.wrap-btn {
+  width: 250px;
+  /* height: 70px; */
+  border: none;
+  /* background-color: rgb(189, 173, 173); */
+  /* line-height: ; */
+}
+.add-user-btn {
+  width: 100%;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.task-name {
+  margin-bottom: 7px;
+  width: 100%;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 0 7px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+.add-user-btn:hover {
+  color: #0277d1;
+  background-color: white;
+}
