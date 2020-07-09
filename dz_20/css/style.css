@@ -1,0 +1,58 @@
+@import "./reset.css";
+
+body {
+  /* display: flex;
+  justify-content: center; */
+  background-color: #0277d1;
+  color: #ffffff;
+
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.container {
+  margin-top: 20px;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+  padding: 7px 7px;
+  margin-bottom: 15px;
+}
+.btn-add {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.btn-add:hover {
+  border: 2px solid #0277d1;
+  color: #0277d1;
+  background-color: white;
+}
+.del-sticker {
+  color: rgb(233, 64, 64);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+.sticker-wrap {
+  /* display: flex;
+  justify-content: center;
+  flex-wrap: wrap; */
+  position: relative;
+}
+.card {
+  height: 200px;
+  width: 200px;
+  margin-right: 15px;
+  position: absolute;
+}
+.card-size {
+  height: 200px;
+  width: 200px;
+}
