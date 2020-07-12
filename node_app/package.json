@@ -1,0 +1,15 @@
+{
+  "name": "alex",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "start": "node ./app.js"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Khramov Alex",
+  "license": "ISC"
+}
