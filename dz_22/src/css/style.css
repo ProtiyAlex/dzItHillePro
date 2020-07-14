@@ -1,0 +1,16 @@
+@import "./reset.css";
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #0277d1;
+  color: #ffffff;
+
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
