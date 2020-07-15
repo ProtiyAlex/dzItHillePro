@@ -12,41 +12,29 @@ let todos = [];
 getTodos();
 initEvents();
 
-function onclickAddTask(event) {
-  switch (true) {
-    case Boolean(event.target.closest(DELETE_BTN_CLASS)):
-      deleteTodo($(event.target.closest(TODO_ITEM_CLASS)).data("id"));
-      break;
-    case Boolean(event.target.closest(TODO_ITEM_CLASS)):
-      toggleTodo($(event.target.closest(TODO_ITEM_CLASS)).data("id"));
-      break;
-  }
+function onDelClick(event) {
+  event.stopPropagation();
+  deleteTodo($(event.target.closest(TODO_ITEM_CLASS)).data("id"));
+}
+
+function onTaskClick(event) {
+  toggleTodo($(event.target.closest(TODO_ITEM_CLASS)).data("id"));
 }
 
 function initEvents() {
-  $addTaskBtn.on("click", onTaskListClick);
-  $taskList.on("click", onclickAddTask);
+  $addTaskBtn.on("click", onclickAddTask);
+  $taskList.on("click", DELETE_BTN_CLASS, onDelClick);
+  $taskList.on("click", TODO_ITEM_CLASS, onTaskClick);
 }
 
-function onTaskListClick() {
+function onclickAddTask() {
   const todo = { title: $taskNameInput.val(), isDone: false };
 
-  fetch(TODOS_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(todo),
-  })
-    .then((resp) => resp.json())
-    .then(addTodo);
+  api.create(TODOS_URL, todo).then(addTodo);
 }
 
 function getTodos() {
-  return fetch(TODOS_URL)
-    .then((resp) => resp.json())
-    .then(setTodos)
-    .then(renderTodos);
+  return api.requestGet(TODOS_URL).then(setTodos).then(renderTodos);
 }
 
 function setTodos(data) {
@@ -69,21 +57,13 @@ function toggleTodo(id) {
 
   todo.isDone = !todo.isDone;
 
-  fetch(`${TODOS_URL}/${todo.id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(todo),
-  });
+  api.change(`${TODOS_URL}/${todo.id}`, todo);
 
   $taskList.children(`[data-id = "${id}"]`).toggleClass("done");
 }
 
 function deleteTodo(id) {
-  fetch(`${TODOS_URL}/${id}`, {
-    method: "DELETE",
-  });
+  api.delete(`${TODOS_URL}/${id}`);
 
   todos = todos.filter((item) => item.id != id);
 
