@@ -1,7 +1,6 @@
 class Model {
   constructor(url) {
     this.baseUrl = url;
-    //this.data = {};
   }
 
   setData(data) {
@@ -16,7 +15,6 @@ class Model {
 
   create(title) {
     const todo = { title: title, isDone: false };
-    // console.log(this.baseUrl);
     return fetch(this.baseUrl, {
       method: "POST",
       headers: {

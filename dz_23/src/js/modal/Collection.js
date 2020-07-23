@@ -20,7 +20,6 @@ class Collection {
 
   delete(id) {
     const model = this.list.find((item) => item.id == id);
-    console.log(model);
     return model.delete().then(() => {
       this.list = this.list.filter((item) => item !== model);
     });

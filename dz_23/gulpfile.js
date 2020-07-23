@@ -5,7 +5,12 @@ const uglify = require("gulp-uglify-es").default;
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
 const babel = require("gulp-babel");
-
+const arrFileJs = [
+  "./src/js/controller/*.js",
+  "./src/js/modal/*.js",
+  "./src/js/view/*js",
+  "./src/js/*.js",
+];
 function copyHtml() {
   return src("./src/index.html").pipe(dest("./dist/"));
 }
@@ -17,20 +22,13 @@ function copyCss() {
 }
 
 function copyJs() {
-  return (
-    src([
-      "./src/js/controller/*.js",
-      "./src/js/modal/*.js",
-      "./src/js/view/*js",
-      "./src/js/*.js",
-    ])
-      .pipe(sourcemaps.init())
-      // .pipe(babel())
-      .pipe(concat("all.js"))
-      .pipe(uglify())
-      .pipe(sourcemaps.write())
-      .pipe(dest("./dist/"))
-  );
+  return src(arrFileJs)
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(concat("all.js"))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(dest("./dist/"));
 }
 function vendors() {
   return src("./node_modules/jquery/dist/jquery.min.js")
@@ -38,26 +36,14 @@ function vendors() {
     .pipe(dest("./dist/"));
 }
 
-// function watchJs(cb) {
-//   watch("./src/js/*.js", copyJs);
-//   cb();
-// }
-
 function server(cb) {
   browserSync.init({
     server: {
       baseDir: "./dist",
     },
   });
-  watch(
-    [
-      "./src/js/controller/*.js",
-      "./src/js/modal/*.js",
-      "./src/js/view/*js",
-      "./src/js/*.js",
-    ],
-    series(copyJs, reloadBr)
-  );
+  watch(arrFileJs, series(copyJs, reloadBr));
+  cb();
 }
 
 function reloadBr(cb) {
