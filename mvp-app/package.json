@@ -11,5 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "browser-sync": "^2.26.10",
+    "gulp-babel": "^8.0.0-beta.2"
   }
 }
